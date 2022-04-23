@@ -22,6 +22,10 @@ public class Car {
         return carPosition;
     }
 
+    public void inputCarPosition(CarPosition carPosition) {
+        this.carPosition = carPosition;
+    }
+
     public static Car of(CarName carName) {
         return new Car(carName);
     }
