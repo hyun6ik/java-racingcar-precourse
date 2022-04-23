@@ -1,8 +1,10 @@
 package racingcar.nextstep.domain.racing.chart;
 
 import racingcar.nextstep.domain.car.Car;
+import racingcar.nextstep.global.message.TextMessage;
 
 public class RacingChart {
+
 
     private final Car car;
     private final String result;
@@ -25,7 +27,7 @@ public class RacingChart {
     }
 
     public String result() {
-        return car.getCarName().getValue() + " : " + result;
+        return car.getCarName().getValue() + TextMessage.COLON + result;
     }
 
 }

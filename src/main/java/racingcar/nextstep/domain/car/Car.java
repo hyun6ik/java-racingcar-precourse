@@ -2,9 +2,11 @@ package racingcar.nextstep.domain.car;
 
 import racingcar.nextstep.domain.racing.chart.RacingChart;
 import racingcar.nextstep.global.message.Number;
+import racingcar.nextstep.global.message.TextMessage;
 import racingcar.nextstep.global.utils.Randoms;
 
 public class Car {
+
 
     private final CarName carName;
     private CarPosition carPosition;
@@ -48,7 +50,7 @@ public class Car {
     public RacingChart createRacingChart() {
         final StringBuilder result = new StringBuilder();
         for (int i = Number.MIN_VALUE; i < carPosition.getValue(); i++) {
-            result.append("-");
+            result.append(TextMessage.DASH);
         }
         return RacingChart.of(this, result.toString());
     }
