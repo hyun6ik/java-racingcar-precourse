@@ -1,6 +1,7 @@
 package racingcar.nextstep.interfaces;
 
 import racingcar.nextstep.application.racing.RacingFacade;
+import racingcar.nextstep.domain.car.CarsName;
 import racingcar.nextstep.domain.racing.RacingService;
 
 public class RacingController {
@@ -11,5 +12,9 @@ public class RacingController {
     public RacingController(RacingFacade racingFacade, RacingService racingService) {
         this.racingFacade = racingFacade;
         this.racingService = racingService;
+    }
+
+    public void game() {
+        final CarsName carsName = racingService.requestCarsName();
     }
 }
