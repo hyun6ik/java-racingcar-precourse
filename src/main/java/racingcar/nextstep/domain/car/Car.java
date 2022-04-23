@@ -6,9 +6,9 @@ public class Car {
     private final CarPosition carPosition;
 
 
-    public Car(CarName carName, CarPosition carPosition) {
+    public Car(CarName carName) {
         this.carName = carName;
-        this.carPosition = carPosition;
+        this.carPosition = CarPosition.zero();
     }
 
     public CarName getCarName() {
@@ -17,5 +17,9 @@ public class Car {
 
     public CarPosition getCarPosition() {
         return carPosition;
+    }
+
+    public static Car of(CarName carName) {
+        return new Car(carName);
     }
 }

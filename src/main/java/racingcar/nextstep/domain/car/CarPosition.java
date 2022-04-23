@@ -12,6 +12,10 @@ public class CarPosition {
         return value;
     }
 
+    public static CarPosition zero() {
+        return new CarPosition(0);
+    }
+
     public static CarPosition of(int value) {
         return new CarPosition(value);
     }

@@ -13,4 +13,8 @@ public class Cars {
     public List<Car> getCars() {
         return cars;
     }
+
+    public static Cars of(List<Car> cars) {
+        return new Cars(cars);
+    }
 }
