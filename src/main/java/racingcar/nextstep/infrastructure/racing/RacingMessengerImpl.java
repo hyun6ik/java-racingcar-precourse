@@ -38,6 +38,11 @@ public class RacingMessengerImpl implements RacingMessenger {
         printMessage(TextMessage.RACING_WINNER_PREFIX + winners);
     }
 
+    @Override
+    public void printErrorMessage(Exception e) {
+        System.out.println(e.getMessage());
+    }
+
     private void printInLine() {
         System.out.println();
     }
@@ -45,4 +50,5 @@ public class RacingMessengerImpl implements RacingMessenger {
     private void printMessage(String message) {
         System.out.println(message);
     }
+
 }

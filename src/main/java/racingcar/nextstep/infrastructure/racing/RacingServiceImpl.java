@@ -24,15 +24,29 @@ public class RacingServiceImpl implements RacingService {
     public CarsName requestCarsName() {
         final String carsName = racingMessenger.requestCarsName();
         final String[] splitCarNames = racingFactory.splitCarsNameWithComma(carsName);
-        racingValidator.isCarNameNotExceedingFive(splitCarNames);
-        racingValidator.isCarNameNotBlank(splitCarNames);
+
+        try{
+            racingValidator.isCarNameNotExceedingFive(splitCarNames);
+            racingValidator.isCarNameNotBlank(splitCarNames);
+        } catch (IllegalArgumentException e) {
+            racingMessenger.printErrorMessage(e);
+            return requestCarsName();
+        }
+
         return racingFactory.createCarsName(splitCarNames);
     }
 
     @Override
     public int requestAttemptsOfNumber() {
         final String stringNumber = racingMessenger.requestAttemptsOfNumber();
-        racingValidator.isNumber(stringNumber);
+
+        try {
+            racingValidator.isNumber(stringNumber);
+        } catch (IllegalArgumentException e) {
+            racingMessenger.printErrorMessage(e);
+            return requestAttemptsOfNumber();
+        }
+
         return racingFactory.convertStringNumberToInteger(stringNumber);
     }
 

@@ -13,4 +13,6 @@ public interface RacingMessenger {
     void printRacingCharts(RacingCharts racingCharts);
 
     void printWinners(Cars winnerCars);
+
+    void printErrorMessage(Exception e);
 }
