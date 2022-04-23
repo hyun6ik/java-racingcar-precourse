@@ -12,6 +12,14 @@ public class RacingChart {
         this.result = result;
     }
 
+    public Car getCar() {
+        return car;
+    }
+
+    public String getResult() {
+        return result;
+    }
+
     public static RacingChart of(Car car, String result) {
         return new RacingChart(car, result);
     }
