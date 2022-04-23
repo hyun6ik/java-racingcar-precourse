@@ -25,7 +25,7 @@ public class RacingChart {
     }
 
     public String result() {
-        return car.getCarName().getValue() + ":" + result;
+        return car.getCarName().getValue() + " : " + result;
     }
 
 }
