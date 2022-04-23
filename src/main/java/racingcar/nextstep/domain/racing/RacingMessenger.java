@@ -4,4 +4,8 @@ public interface RacingMessenger {
     String requestCarsName();
 
     String requestAttemptsOfNumber();
+
+    void printResultMessage();
+
+    void printRacingCharts(RacingCharts racingCharts);
 }

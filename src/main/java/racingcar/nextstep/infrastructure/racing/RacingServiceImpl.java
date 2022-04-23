@@ -10,13 +10,11 @@ public class RacingServiceImpl implements RacingService {
     private final RacingMessenger racingMessenger;
     private final RacingValidator racingValidator;
     private final RacingFactory racingFactory;
-    private final RacingReferee racingReferee;
 
-    public RacingServiceImpl(RacingMessenger racingMessenger, RacingValidator racingValidator, RacingFactory racingFactory, RacingReferee racingReferee) {
+    public RacingServiceImpl(RacingMessenger racingMessenger, RacingValidator racingValidator, RacingFactory racingFactory) {
         this.racingMessenger = racingMessenger;
         this.racingValidator = racingValidator;
         this.racingFactory = racingFactory;
-        this.racingReferee = racingReferee;
     }
 
     @Override
@@ -43,6 +41,12 @@ public class RacingServiceImpl implements RacingService {
         }
     }
 
-
+    @Override
+    public void printRacingResult(Cars cars, int attemptsOfNumber) {
+        for (int i = Number.MIN_VALUE; i < attemptsOfNumber; i++) {
+            final RacingCharts racingCharts = racingFactory.createRacingCharts(cars);
+            racingMessenger.printRacingCharts(racingCharts);
+        }
+    }
 
 }

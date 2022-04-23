@@ -1,5 +1,6 @@
 package racingcar.nextstep.domain.racing;
 
+import racingcar.nextstep.domain.car.Cars;
 import racingcar.nextstep.domain.car.CarsName;
 
 public interface RacingFactory {
@@ -8,4 +9,6 @@ public interface RacingFactory {
     CarsName createCarsName(String[] carNameList);
 
     int convertStringNumberToInteger(String attemptsOfNumber);
+
+    RacingCharts createRacingCharts(Cars cars);
 }

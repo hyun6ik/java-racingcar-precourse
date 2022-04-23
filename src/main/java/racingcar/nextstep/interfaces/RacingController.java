@@ -20,6 +20,6 @@ public class RacingController {
         final Cars cars = carService.createCars(carsName);
         final int attemptsOfNumber = racingService.requestAttemptsOfNumber();
         racingService.startRacing(cars, attemptsOfNumber);
-
+        racingService.printRacingResult(cars, attemptsOfNumber);
     }
 }
