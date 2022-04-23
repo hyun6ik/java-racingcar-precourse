@@ -6,17 +6,16 @@ import racingcar.nextstep.domain.car.CarsName;
 import racingcar.nextstep.domain.racing.chart.RacingChart;
 import racingcar.nextstep.domain.racing.chart.RacingCharts;
 import racingcar.nextstep.domain.racing.service.RacingFactory;
+import racingcar.nextstep.global.message.TextMessage;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class RacingFactoryImpl implements RacingFactory {
 
-    private static final String COMMA = ",";
-
     @Override
     public String[] splitCarsNameWithComma(String carsName) {
-        return carsName.split(COMMA);
+        return carsName.split(TextMessage.COMMA);
     }
 
     @Override

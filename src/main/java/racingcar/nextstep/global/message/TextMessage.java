@@ -9,5 +9,7 @@ public interface TextMessage {
 
     String DASH = "-";
     String COLON = " : ";
+    String COMMA = ",";
+
 
 }
