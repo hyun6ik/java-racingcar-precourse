@@ -1,5 +1,6 @@
 package racingcar.nextstep.infrastructure.racing;
 
+import org.junit.platform.commons.util.StringUtils;
 import racingcar.nextstep.domain.racing.RacingValidator;
 import racingcar.nextstep.global.message.ErrorMessage;
 import racingcar.nextstep.global.message.Number;
@@ -22,6 +23,15 @@ public class RacingValidatorImpl implements RacingValidator {
         for (String splitCarName : splitCarNames) {
             if (isExceedingFive(splitCarName)) {
                 throw new IllegalArgumentException(ErrorMessage.NAME_EXCEED);
+            }
+        }
+    }
+
+    @Override
+    public void isCarNameNotBlank(String[] splitCarNames) {
+        for (String splitCarName : splitCarNames) {
+            if (StringUtils.isBlank(splitCarName)) {
+                throw new IllegalArgumentException(ErrorMessage.NAME_NOT_BLANK);
             }
         }
     }

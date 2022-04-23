@@ -23,6 +23,7 @@ public class RacingServiceImpl implements RacingService {
         final String carsName = racingMessenger.requestCarsName();
         final String[] splitCarNames = racingFactory.splitCarsNameWithComma(carsName);
         racingValidator.isCarNameNotExceedingFive(splitCarNames);
+        racingValidator.isCarNameNotBlank(splitCarNames);
         return racingFactory.createCarsName(splitCarNames);
     }
 

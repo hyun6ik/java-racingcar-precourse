@@ -35,4 +35,15 @@ class RacingValidatorTest {
                 .hasMessage(ErrorMessage.NAME_EXCEED);
     }
 
+    @Test
+    @DisplayName("자동차 이름이 공백이면 IllegalArgumentException 발생")
+    void isCarNameNotBlank() {
+        //given
+        final String[] carNameList = {"   ", "", " "};
+        //when && then
+        assertThatThrownBy(() -> racingValidator.isCarNameNotBlank(carNameList))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage(ErrorMessage.NAME_NOT_BLANK);
+    }
+
 }
