@@ -24,5 +24,14 @@ class RacingFactoryTest {
         assertThat(result).containsExactly("pobi", "crong", "honux");
     }
 
-
+    @Test
+    @DisplayName("String 배열을 CarsName 객체로 변환하기")
+    void createCarsName() {
+        //given
+        final String[] carNameList = {"pobi", "crong", "honux"};
+        //when
+        final CarsName carsName = racingFactory.createCarsName(carNameList);
+        //then
+        assertThat(carsName.getCarNames().size()).isEqualTo(3);
+    }
 }
