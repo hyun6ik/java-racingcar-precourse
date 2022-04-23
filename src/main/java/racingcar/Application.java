@@ -8,5 +8,6 @@ public class Application {
         // TODO: 프로그램 구현
         final AppConfig appConfig = new AppConfig();
         final RacingController racingController = appConfig.racingController();
+        racingController.game();
     }
 }

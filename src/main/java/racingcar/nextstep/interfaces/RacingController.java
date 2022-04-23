@@ -1,6 +1,5 @@
 package racingcar.nextstep.interfaces;
 
-import racingcar.nextstep.application.racing.RacingFacade;
 import racingcar.nextstep.domain.car.Cars;
 import racingcar.nextstep.domain.car.CarsName;
 import racingcar.nextstep.domain.car.service.CarService;
@@ -20,5 +19,7 @@ public class RacingController {
         final CarsName carsName = racingService.requestCarsName();
         final Cars cars = carService.createCars(carsName);
         final int attemptsOfNumber = racingService.requestAttemptsOfNumber();
+        racingService.startRacing(cars, attemptsOfNumber);
+
     }
 }

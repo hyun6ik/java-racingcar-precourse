@@ -19,4 +19,8 @@ public class CarPosition {
     public static CarPosition of(int value) {
         return new CarPosition(value);
     }
+
+    public static CarPosition addValue(int value) {
+        return CarPosition.of(value + 1);
+    }
 }

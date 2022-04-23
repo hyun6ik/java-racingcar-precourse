@@ -17,4 +17,8 @@ public class Cars {
     public static Cars of(List<Car> cars) {
         return new Cars(cars);
     }
+
+    public void racing() {
+        cars.iterator().forEachRemaining(Car::racing);
+    }
 }
