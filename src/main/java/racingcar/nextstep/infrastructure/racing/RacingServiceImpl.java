@@ -3,10 +3,7 @@ package racingcar.nextstep.infrastructure.racing;
 import racingcar.nextstep.domain.car.Cars;
 import racingcar.nextstep.domain.car.CarsName;
 import racingcar.nextstep.domain.racing.chart.RacingCharts;
-import racingcar.nextstep.domain.racing.service.RacingFactory;
-import racingcar.nextstep.domain.racing.service.RacingMessenger;
-import racingcar.nextstep.domain.racing.service.RacingService;
-import racingcar.nextstep.domain.racing.service.RacingValidator;
+import racingcar.nextstep.domain.racing.service.*;
 import racingcar.nextstep.global.message.Number;
 
 public class RacingServiceImpl implements RacingService {
@@ -14,11 +11,13 @@ public class RacingServiceImpl implements RacingService {
     private final RacingMessenger racingMessenger;
     private final RacingValidator racingValidator;
     private final RacingFactory racingFactory;
+    private final RacingReferee racingReferee;
 
-    public RacingServiceImpl(RacingMessenger racingMessenger, RacingValidator racingValidator, RacingFactory racingFactory) {
+    public RacingServiceImpl(RacingMessenger racingMessenger, RacingValidator racingValidator, RacingFactory racingFactory, RacingReferee racingReferee) {
         this.racingMessenger = racingMessenger;
         this.racingValidator = racingValidator;
         this.racingFactory = racingFactory;
+        this.racingReferee = racingReferee;
     }
 
     @Override

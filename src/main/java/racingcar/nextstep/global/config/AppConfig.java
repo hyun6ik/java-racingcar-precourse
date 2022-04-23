@@ -3,16 +3,10 @@ package racingcar.nextstep.global.config;
 import racingcar.nextstep.application.racing.RacingFacade;
 import racingcar.nextstep.domain.car.service.CarCreator;
 import racingcar.nextstep.domain.car.service.CarService;
-import racingcar.nextstep.domain.racing.service.RacingFactory;
-import racingcar.nextstep.domain.racing.service.RacingMessenger;
-import racingcar.nextstep.domain.racing.service.RacingService;
-import racingcar.nextstep.domain.racing.service.RacingValidator;
+import racingcar.nextstep.domain.racing.service.*;
 import racingcar.nextstep.infrastructure.car.CarCreatorImpl;
 import racingcar.nextstep.infrastructure.car.CarServiceImpl;
-import racingcar.nextstep.infrastructure.racing.RacingFactoryImpl;
-import racingcar.nextstep.infrastructure.racing.RacingMessengerImpl;
-import racingcar.nextstep.infrastructure.racing.RacingServiceImpl;
-import racingcar.nextstep.infrastructure.racing.RacingValidatorImpl;
+import racingcar.nextstep.infrastructure.racing.*;
 import racingcar.nextstep.interfaces.RacingController;
 
 public class AppConfig {
@@ -26,7 +20,7 @@ public class AppConfig {
     }
 
     public RacingService racingService() {
-        return new RacingServiceImpl(racingMessenger(), racingValidator(), racingFactory());
+        return new RacingServiceImpl(racingMessenger(), racingValidator(), racingFactory(), racingReferee());
     }
 
     public RacingMessenger racingMessenger() {
@@ -39,6 +33,10 @@ public class AppConfig {
 
     public RacingFactory racingFactory() {
         return new RacingFactoryImpl();
+    }
+
+    public RacingReferee racingReferee() {
+        return new RacingRefereeImpl();
     }
 
     public CarService carService() {
