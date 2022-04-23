@@ -26,4 +26,9 @@ public class RacingFactoryImpl implements RacingFactory {
 
         return CarsName.of(carNameList);
     }
+
+    @Override
+    public int convertStringNumberToInteger(String attemptsOfNumber) {
+        return Integer.parseInt(attemptsOfNumber);
+    }
 }

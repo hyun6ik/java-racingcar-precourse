@@ -6,4 +6,6 @@ public interface RacingFactory {
     String[] splitCarsNameWithComma(String carsName);
 
     CarsName createCarsName(String[] carNameList);
+
+    int convertStringNumberToInteger(String attemptsOfNumber);
 }

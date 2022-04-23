@@ -12,6 +12,12 @@ public class RacingMessengerImpl implements RacingMessenger {
         return Console.readLine();
     }
 
+    @Override
+    public String requestAttemptsOfNumber() {
+        printMessage(TextMessage.REQUEST_ATTEMPT_NUMBER);
+        return Console.readLine();
+    }
+
     private void printMessage(String message) {
         System.out.println(message);
     }

@@ -24,4 +24,12 @@ public class RacingServiceImpl implements RacingService {
         final String[] splitCarNames = racingFactory.splitCarsNameWithComma(carsName);
         return racingFactory.createCarsName(splitCarNames);
     }
+
+    @Override
+    public int requestAttemptsOfNumber() {
+        final String stringNumber = racingMessenger.requestAttemptsOfNumber();
+        racingValidator.isNumber(stringNumber);
+        return racingFactory.convertStringNumberToInteger(stringNumber);
+    }
+
 }

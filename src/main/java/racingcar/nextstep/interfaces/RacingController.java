@@ -16,5 +16,6 @@ public class RacingController {
 
     public void game() {
         final CarsName carsName = racingService.requestCarsName();
+        final int attemptsOfNumber = racingService.requestAttemptsOfNumber();
     }
 }
