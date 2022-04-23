@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import racingcar.nextstep.global.message.ErrorMessage;
 import racingcar.nextstep.infrastructure.racing.RacingValidatorImpl;
 
+import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class RacingValidatorTest {
@@ -18,9 +19,20 @@ class RacingValidatorTest {
         //given
         final String inputNumber = "12a";
         //when && then
-        Assertions.assertThatThrownBy(() -> racingValidator.isNumber(inputNumber))
+        assertThatThrownBy(() -> racingValidator.isNumber(inputNumber))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessage(ErrorMessage.IS_NOT_NUMBER);
+    }
+
+    @Test
+    @DisplayName("자동차 이름이 5글자 이상인게 있으면 IllegalArgumentException 발생")
+    void isCarNameNotExceedingFive() {
+        //given
+        final String[] carNameList = {"pobiaaa", "crongbbbbbbbbb", "honux"};
+        //when && then
+        assertThatThrownBy(() -> racingValidator.isCarNameNotExceedingFive(carNameList))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage(ErrorMessage.NAME_EXCEED);
     }
 
 }
