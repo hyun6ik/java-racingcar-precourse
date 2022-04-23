@@ -1,6 +1,5 @@
 package racingcar.nextstep.global.config;
 
-import racingcar.nextstep.application.racing.RacingFacade;
 import racingcar.nextstep.domain.car.service.CarCreator;
 import racingcar.nextstep.domain.car.service.CarService;
 import racingcar.nextstep.domain.racing.service.*;
@@ -13,10 +12,6 @@ public class AppConfig {
 
     public RacingController racingController() {
         return new RacingController(carService(), racingService());
-    }
-
-    public RacingFacade racingFacade() {
-        return new RacingFacade(racingService(), carService());
     }
 
     public RacingService racingService() {
