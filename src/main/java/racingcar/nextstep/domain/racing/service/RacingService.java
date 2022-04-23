@@ -13,4 +13,6 @@ public interface RacingService {
     void printRacingResult(Cars cars, int attemptsOfNumber);
 
     Cars findWinners(Cars cars);
+
+    void printWinners(Cars winnerCars);
 }

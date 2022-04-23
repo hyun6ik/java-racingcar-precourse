@@ -1,5 +1,6 @@
 package racingcar.nextstep.domain.car;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Cars {
@@ -20,5 +21,15 @@ public class Cars {
 
     public void racing() {
         cars.iterator().forEachRemaining(Car::racing);
+    }
+
+    public List<String> getCarNameList() {
+        List<String> list = new ArrayList<>();
+
+        for (Car car : cars) {
+            list.add(car.getCarName().getValue());
+        }
+
+        return list;
     }
 }

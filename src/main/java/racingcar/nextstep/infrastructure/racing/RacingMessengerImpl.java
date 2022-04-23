@@ -31,6 +31,13 @@ public class RacingMessengerImpl implements RacingMessenger {
         printInLine();
     }
 
+    @Override
+    public void printWinners(Cars winnerCars) {
+        final String winnersCarNameList = winnerCars.getCarNameList().toString();
+        final String winners = winnersCarNameList.substring(1, winnersCarNameList.length() - 1);
+        printMessage(TextMessage.RACING_WINNER_PREFIX + winners);
+    }
+
     private void printInLine() {
         System.out.println();
     }

@@ -57,4 +57,9 @@ public class RacingServiceImpl implements RacingService {
         return racingReferee.findWinners(cars);
     }
 
+    @Override
+    public void printWinners(Cars winnerCars) {
+        racingMessenger.printWinners(winnerCars);
+    }
+
 }

@@ -11,4 +11,6 @@ public interface RacingMessenger {
     void printResultMessage();
 
     void printRacingCharts(RacingCharts racingCharts);
+
+    void printWinners(Cars winnerCars);
 }
