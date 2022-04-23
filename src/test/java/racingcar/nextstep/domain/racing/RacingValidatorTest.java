@@ -1,13 +1,12 @@
 package racingcar.nextstep.domain.racing;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import racingcar.nextstep.domain.racing.service.RacingValidator;
 import racingcar.nextstep.global.message.ErrorMessage;
 import racingcar.nextstep.infrastructure.racing.RacingValidatorImpl;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.*;
 
 class RacingValidatorTest {
 

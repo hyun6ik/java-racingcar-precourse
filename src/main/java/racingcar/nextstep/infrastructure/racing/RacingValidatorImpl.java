@@ -1,7 +1,7 @@
 package racingcar.nextstep.infrastructure.racing;
 
 import org.junit.platform.commons.util.StringUtils;
-import racingcar.nextstep.domain.racing.RacingValidator;
+import racingcar.nextstep.domain.racing.service.RacingValidator;
 import racingcar.nextstep.global.message.ErrorMessage;
 import racingcar.nextstep.global.message.Number;
 

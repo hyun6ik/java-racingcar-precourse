@@ -3,7 +3,7 @@ package racingcar.nextstep.interfaces;
 import racingcar.nextstep.domain.car.Cars;
 import racingcar.nextstep.domain.car.CarsName;
 import racingcar.nextstep.domain.car.service.CarService;
-import racingcar.nextstep.domain.racing.RacingService;
+import racingcar.nextstep.domain.racing.service.RacingService;
 
 public class RacingController {
 

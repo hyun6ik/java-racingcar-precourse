@@ -1,6 +1,6 @@
 package racingcar.nextstep.domain.car;
 
-import racingcar.nextstep.domain.racing.RacingChart;
+import racingcar.nextstep.domain.racing.chart.RacingChart;
 import racingcar.nextstep.global.message.Number;
 import racingcar.nextstep.global.utils.Randoms;
 

@@ -5,11 +5,9 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import racingcar.nextstep.domain.car.Cars;
 import racingcar.nextstep.domain.car.CarsName;
-import racingcar.nextstep.domain.racing.RacingFactory;
+import racingcar.nextstep.domain.racing.service.RacingFactory;
 import racingcar.nextstep.infrastructure.car.CarCreatorImpl;
 import racingcar.nextstep.infrastructure.racing.RacingFactoryImpl;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class CarCreatorTest {
 

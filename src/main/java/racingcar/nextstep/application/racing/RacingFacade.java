@@ -1,7 +1,7 @@
 package racingcar.nextstep.application.racing;
 
 import racingcar.nextstep.domain.car.service.CarService;
-import racingcar.nextstep.domain.racing.RacingService;
+import racingcar.nextstep.domain.racing.service.RacingService;
 
 public class RacingFacade {
 

@@ -1,7 +1,7 @@
 package racingcar.nextstep.infrastructure.racing;
 
-import racingcar.nextstep.domain.racing.RacingCharts;
-import racingcar.nextstep.domain.racing.RacingMessenger;
+import racingcar.nextstep.domain.racing.chart.RacingCharts;
+import racingcar.nextstep.domain.racing.service.RacingMessenger;
 import racingcar.nextstep.global.message.TextMessage;
 import racingcar.nextstep.global.utils.Console;
 

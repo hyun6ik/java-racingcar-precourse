@@ -1,4 +1,4 @@
-package racingcar.nextstep.domain.racing;
+package racingcar.nextstep.domain.racing.chart;
 
 import java.util.List;
 

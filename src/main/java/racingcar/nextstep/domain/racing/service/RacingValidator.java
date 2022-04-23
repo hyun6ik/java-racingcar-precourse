@@ -1,4 +1,4 @@
-package racingcar.nextstep.domain.racing;
+package racingcar.nextstep.domain.racing.service;
 
 public interface RacingValidator {
     void isNumber(String stringNumber);

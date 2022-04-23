@@ -3,9 +3,9 @@ package racingcar.nextstep.infrastructure.racing;
 import racingcar.nextstep.domain.car.CarName;
 import racingcar.nextstep.domain.car.Cars;
 import racingcar.nextstep.domain.car.CarsName;
-import racingcar.nextstep.domain.racing.RacingChart;
-import racingcar.nextstep.domain.racing.RacingCharts;
-import racingcar.nextstep.domain.racing.RacingFactory;
+import racingcar.nextstep.domain.racing.chart.RacingChart;
+import racingcar.nextstep.domain.racing.chart.RacingCharts;
+import racingcar.nextstep.domain.racing.service.RacingFactory;
 
 import java.util.ArrayList;
 import java.util.List;
