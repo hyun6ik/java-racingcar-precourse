@@ -1,8 +1,13 @@
 package racingcar.nextstep.domain.racing;
 
+import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import racingcar.nextstep.domain.car.Car;
+import racingcar.nextstep.domain.car.CarName;
+import racingcar.nextstep.domain.car.Cars;
 import racingcar.nextstep.domain.car.CarsName;
+import racingcar.nextstep.domain.racing.chart.RacingCharts;
 import racingcar.nextstep.domain.racing.service.RacingFactory;
 import racingcar.nextstep.infrastructure.racing.RacingFactoryImpl;
 
@@ -32,5 +37,18 @@ class RacingFactoryTest {
         final CarsName carsName = racingFactory.createCarsName(carNameList);
         //then
         assertThat(carsName.getCarNames().size()).isEqualTo(3);
+    }
+
+    @Test
+    @DisplayName("RacingCharts 일급 컬렉션 객체를 만들기")
+    void createRacingCharts() {
+        //given
+        final Cars cars = Cars.of(Lists.newArrayList(Car.of(CarName.of("aaa")), Car.of(CarName.of("bbb")), Car.of(CarName.of("ccc"))));
+        //when
+        final RacingCharts racingCharts = racingFactory.createRacingCharts(cars);
+        //then
+        assertThat(racingCharts.getRacingResults().size()).isEqualTo(3);
+        assertThat(racingCharts.getRacingResults().get(0).getCar().getCarName().getValue()).isEqualTo("aaa");
+
     }
 }
