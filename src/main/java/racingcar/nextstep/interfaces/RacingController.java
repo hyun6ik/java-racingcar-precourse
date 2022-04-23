@@ -21,5 +21,6 @@ public class RacingController {
         final int attemptsOfNumber = racingService.requestAttemptsOfNumber();
         racingService.startRacing(cars, attemptsOfNumber);
         racingService.printRacingResult(cars, attemptsOfNumber);
+        final Cars winnerCars = racingService.findWinners(cars);
     }
 }

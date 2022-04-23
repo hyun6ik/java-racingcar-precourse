@@ -52,4 +52,9 @@ public class RacingServiceImpl implements RacingService {
         }
     }
 
+    @Override
+    public Cars findWinners(Cars cars) {
+        return racingReferee.findWinners(cars);
+    }
+
 }
